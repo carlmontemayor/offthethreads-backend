@@ -1,33 +1,23 @@
 {
-  "name": "offthethreads-backend",
-  "version": "1.0.0",
-  "description": "Backend functionality with for the Off The Threads website.",
-  "main": "server.js",
+  "name": "test2",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carlmontemayor/offthethreads-backend.git"
-  },
-  "author": "Carl Montemayor",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/carlmontemayor/offthethreads-backend/issues"
-  },
-  "homepage": "https://github.com/carlmontemayor/offthethreads-backend#readme",
-  "devDependencies": {
-    "concurrently": "^5.1.0",
-    "nodemon": "^2.0.2"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongodb": "^3.5.3",
-    "mongoose": "^5.9.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "knex": "^0.20.12",
+    "morgan": "~1.9.1",
+    "pg": "^7.18.2"
   },
-  "engines": {
-    "node": "12.x"
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.1.1"
   }
 }
