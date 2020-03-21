@@ -15,6 +15,7 @@ exports.seed = function(knex, Promise) {
                 item_era: '00',
                 item_description: 'Vintage Primary Colored Bogner Ski Jacket.',
                 item_reworked: false,
+                item_bought: false,
                 item_price: 80.00
             });
         }).then(function () {
@@ -28,6 +29,7 @@ exports.seed = function(knex, Promise) {
                 item_era: '00',
                 item_description: 'Shell is 100% genuine leather suede. Cropped in the body for a great fit and elastic banding is in great condition and not overstretched.',
                 item_reworked: false,
+                item_bought: false,
                 item_price: 31.50
             });
         }).then(function () {
@@ -41,6 +43,7 @@ exports.seed = function(knex, Promise) {
                 item_era: '00',
                 item_description: 'Vintage green striped sweater with pocket detailing // Made in Singapore .',
                 item_reworked: false,
+                item_bought: false,
                 item_price: 30.00
             });
         }).then(function () {
@@ -54,6 +57,7 @@ exports.seed = function(knex, Promise) {
                 item_era: '90',
                 item_description: 'Vintage Faded Black Strawberry Fest Tee with distressed neckline 🍓 // slight stain on front',
                 item_reworked: false,
+                item_bought: false,
                 item_price: 25.00
             });
         }).then(function () {
@@ -67,6 +71,7 @@ exports.seed = function(knex, Promise) {
                 item_era: '00',
                 item_description: 'Custom two piece set. Straps left long to cut at desired length.',
                 item_reworked: true,
+                item_bought: false,
                 item_price: 60.00
             });
         });

@@ -13,6 +13,7 @@ exports.up = function(knex, Promise) {
           table.string('item_era').notNullable();
           table.text('item_description').notNullable();
           table.boolean('item_reworked').notNullable();
+          table.boolean('item_bought').notNullable();
           table.float('item_price', 5, 2).notNullable();
     });
 };
