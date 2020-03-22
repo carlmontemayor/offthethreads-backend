@@ -48,6 +48,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/v1', indexRouter);
 app.use('/users', usersRouter);
+app.use('/', (req, res, next) => {
+    res.status(200);
+    res.json('hello');
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
