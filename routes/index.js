@@ -5,9 +5,9 @@ var queries = require('../db/queries');
 
 
 // *** GET all shows *** //
-router.get('/clothing', function(req, res, next) {
+router.get('/clothing', (req, res, next) => {
     queries.getAll()
-        .then(function(clothing) {
+        .then((clothing) => {
             res.status(200).json(clothing);
         })
         .catch(function(error) {
