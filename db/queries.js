@@ -21,11 +21,18 @@ function getSingle(clothingId) {
 }
 
 // POST Queries
-function addOne() {
-    return Clothing().returning(['id', 'item_name']).insert({});
+function addOne(clothingItem) {
+    return Clothing().insert(clothingItem, 'id');
+}
+
+// PUT Queries
+function updateItem(clothingId, clothingItem) {
+    return Clothing().where('id', clothingId).update(clothingItem, "*");
 }
 
 module.exports = {
   getAll: getAll,
-  getSingle: getSingle
+  getSingle: getSingle,
+  addOne: addOne,
+  updateItem: updateItem
 };

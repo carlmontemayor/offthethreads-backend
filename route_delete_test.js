@@ -1,5 +1,8 @@
-// Testing for the POST route
-// Tests /v1/clothing to add a clothing item 
+// Testing for the DELETE route
+// Tests /v1/clothing/:id to delete selected clothing item
+
+
+// TODO
 
 // Set PostgreSQL in test environment
 process.env.NODE_ENV = 'test';
@@ -13,8 +16,8 @@ const expect = require('chai').expect;
 // Import fixtures
 const fixtures = require('./fixtures'); 
 
-// Testing POST /v1/clothing 
-describe('POST /v1/clothing', () => {
+// Testing DELETE /v1/clothing 
+describe('DELETE /v1/clothing', () => {
     // Get latest migration and update database
     beforeEach((done) => {
         // Run migrations
@@ -33,17 +36,17 @@ describe('POST /v1/clothing', () => {
             });
     });
 
-    // Test POST a clothing item
-    it('should add a single clothing item', (done) => {
+    // Test DELETE a clothing item
+    it('should delete a single clothing item', (done) => {
         request(server)
-            .post('/v1/clothing')
-            .send(fixtures.clothingItem)
+            .put('/v1/clothing/1')
+            .send(fixtures.changedClothingItemNoId)
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200)
             .then((res) => {
                 expect(res.body).to.be.a('object');
-                expect(res.body).to.deep.equal(fixtures.clothingItem);
+                expect(res.body).to.deep.equal(fixtures.changedClothingItem);
                 done();
             }).catch((e) => {
                 done(e);

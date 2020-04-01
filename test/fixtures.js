@@ -1,6 +1,37 @@
-const clothingItem = [
+const changedClothingItemNoId = 
     {
-        "id":6,
+        "item_name":"Ski Jacket",
+        "item_size":"S",
+        "item_category":"outerwear",
+        "item_type":"womens",
+        "item_color":"yellow",
+        "item_condition":"perfect",
+        "item_era":"90",
+        "item_description":"Vintage Primary Colored Bogner Ski Jacket.",
+        "item_reworked":false,
+        "item_bought":false,
+        "item_price":80
+    };
+
+const changedClothingItem = 
+    {
+        "id":1,
+        "item_name":"Ski Jacket",
+        "item_size":"S",
+        "item_category":"outerwear",
+        "item_type":"womens",
+        "item_color":"yellow",
+        "item_condition":"perfect",
+        "item_era":"90",
+        "item_description":"Vintage Primary Colored Bogner Ski Jacket.",
+        "item_reworked":false,
+        "item_bought":false,
+        "item_price":80
+    };
+
+const clothingItem = 
+    {
+        "id": 6,
         "item_name":"Baseball Tee",
         "item_size":"L",
         "item_category":"t-shirt",
@@ -12,8 +43,7 @@ const clothingItem = [
         "item_reworked":false,
         "item_bought":false,
         "item_price":45
-    }
-];
+    };
 
 const clothing = 
 [
@@ -86,5 +116,7 @@ const clothing =
 
 module.exports = {
     clothing,
-    clothingItem
+    clothingItem,
+    changedClothingItem,
+    changedClothingItemNoId
 };
