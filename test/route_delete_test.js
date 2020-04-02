@@ -39,14 +39,11 @@ describe('DELETE /v1/clothing', () => {
     // Test DELETE a clothing item
     it('should delete a single clothing item', (done) => {
         request(server)
-            .put('/v1/clothing/1')
-            .send(fixtures.changedClothingItemNoId)
-            .set('Accept', 'application/json')
-            .expect('Content-Type', /json/)
+            .delete('/v1/clothing/1')
             .expect(200)
             .then((res) => {
                 expect(res.body).to.be.a('object');
-                expect(res.body).to.deep.equal(fixtures.changedClothingItem);
+                expect(res.body).to.deep.equal(fixtures.clothing[0]);
                 done();
             }).catch((e) => {
                 done(e);

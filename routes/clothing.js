@@ -96,6 +96,24 @@ router.put('/:id', isValidId,  (req, res, next) => {
 });
 
 
+// *** DELETE single clothig=ng item *** //
+router.delete('/:id', isValidId, (req, res, next) => {
+    queries.getSingle(req.params.id)
+        .then((clothingItem) => {
+            queries.deleteItem(req.params.id)
+            .then(() => {
+                res.status(200).json(clothingItem);
+            })
+            .catch((err) => {
+                next(err);
+            });
+        })
+        .catch((err) => {
+            next(err);
+        });
+})
+
+
 
 
 

@@ -27,12 +27,18 @@ function addOne(clothingItem) {
 
 // PUT Queries
 function updateItem(clothingId, clothingItem) {
-    return Clothing().where('id', clothingId).update(clothingItem, "*");
+    return Clothing().where('id', parseInt(clothingId)).update(clothingItem, "*");
+}
+
+// DELETE Queries
+function deleteItem(clothingId) {
+    return Clothing().where('id', parseInt(clothingId)).del();
 }
 
 module.exports = {
   getAll: getAll,
   getSingle: getSingle,
   addOne: addOne,
-  updateItem: updateItem
+  updateItem: updateItem,
+  deleteItem: deleteItem
 };
