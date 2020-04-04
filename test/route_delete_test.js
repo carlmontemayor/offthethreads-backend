@@ -17,7 +17,7 @@ const expect = require('chai').expect;
 const fixtures = require('./fixtures'); 
 
 // Testing DELETE /v1/clothing 
-describe('DELETE /v1/clothing', () => {
+describe('DELETE /v1/clothing/:id', () => {
     // Get latest migration and update database
     beforeEach((done) => {
         // Run migrations
