@@ -8,6 +8,9 @@ var logger = require('morgan');
 var clothingRouter = require('./routes/clothing');
 var usersRouter = require('./routes/users');
 
+// Load env variables
+require('dotenv').config();
+
 var app = express();
 app.options('*', cors());
 app.use(cors({origin: '*'}));
