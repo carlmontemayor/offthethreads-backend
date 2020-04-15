@@ -1,5 +1,16 @@
 // Update with your config settings.
 
+require('dotenv').config();
+
+var pg = require('pg');
+console.log(process.env.NODE_ENV)
+
+if (process.env.NODE_ENV === 'production')
+{
+    pg.defaults.ssl = true; 
+}
+
+
 module.exports = {
   test: {
     client: 'pg',
