@@ -1,5 +1,4 @@
 var createError = require('http-errors');
-var cors = require('cors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -16,10 +15,6 @@ require('dotenv').config();
 var app = express();
 
 app.use(helmet());
-
-if (process.env.NODE_ENV === 'development') {
-    app.use(cors());
-}
 
 // view engine setup
 app.set('views', __dirname + '/views');
