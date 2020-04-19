@@ -23,6 +23,31 @@ block content
           h1.display-4 Add New Item 
           p.lead
             | Add a new item to the inventory 
+      .container
+        form
+          .form-group
+            label(for='exampleFormControlInput1') Item Name 
+            input#exampleFormControlInput1.form-control(type='text' placeholder='Cool T-Shirt')
+          .form-group
+            label(for='exampleFormControlSelect1') Quantity
+            select#exampleFormControlSelect1.form-control
+              option 1
+              option 2
+              option 3
+              option 4
+              option 5
+          .form-group
+            label(for='exampleFormControlSelect2') Example multiple select
+            select#exampleFormControlSelect2.form-control(multiple='')
+              option 1
+              option 2
+              option 3
+              option 4
+              option 5
+          .form-group
+            label(for='exampleFormControlTextarea1') Example textarea
+            textarea#exampleFormControlTextarea1.form-control(rows='3')
+          button.btn.btn-outline-primary(type='button') Submit
       .jumbotron.jumbotron-fluid
         .container
           h1.display-4 Update an Item 
