@@ -13,8 +13,9 @@ var indexRouter = require('./routes/index');
 require('dotenv').config();
 
 var app = express();
-app.options('*', cors());
-app.use(cors({origin: '*'}));
+
+app.use(cors());
+
 
 // view engine setup
 app.set('views', __dirname + '/views');
