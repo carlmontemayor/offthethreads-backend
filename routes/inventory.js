@@ -6,7 +6,7 @@ var queries = require('../db/queries');
 router.get('/', function(req, res) {
     queries.getAll()
         .then((clothing) => {
-            res.send(clothing);
+            res.status(200).render('inventory', {clothing: clothing})
         })
         .catch((error) => {
             next(error);

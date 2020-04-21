@@ -37,3 +37,9 @@ block content
               th(scope='col') Reworked 
               th(scope='col') Bought 
               th(scope='col') Price 
+          tbody
+            for item in clothing
+              tr
+                th(scope='row')= item.id 
+                td= item.item_name
+            
