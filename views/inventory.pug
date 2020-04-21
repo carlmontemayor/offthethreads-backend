@@ -42,4 +42,20 @@ block content
               tr
                 th(scope='row')= item.id 
                 td= item.item_name
+                td= item.item_size
+                td= item.item_category
+                td= item.item_type
+                td= item.item_color
+                td= item.item_condition
+                td= item.item_era
+                td= item.item_description
+                if item.item_reworked
+                  td ✔️
+                else 
+                  td ❌
+                if item.item_bought
+                  td ✔️
+                else 
+                  td ❌
+                td= item.item_price
             
