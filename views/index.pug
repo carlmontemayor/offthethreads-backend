@@ -3,17 +3,17 @@ extends layout
 block content    
   body
       nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        a.navbar-brand(href='#') Off The Threads Dashboard 
+        a.navbar-brand(href='/') Off The Threads Dashboard 
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarNav.collapse.navbar-collapse
           ul.navbar-nav
             li.nav-item.active
-              a.nav-link(href='#')
+              a.nav-link(href='/')
                 | Home 
                 span.sr-only (current)
             li.nav-item
-              a.nav-link(href='#add_inventory') Current Inventory 
+              a.nav-link(href='/inventory') Current Inventory 
             li.nav-item
               a.nav-link(href='#alteration_schedule') Alteration Schedule 
             li.nav-item
@@ -29,27 +29,64 @@ block content
             label(for='exampleFormControlInput1') Item Name 
             input#exampleFormControlInput1.form-control(type='text' placeholder='Cool T-Shirt')
           .form-group
-            label(for='exampleFormControlSelect1') Quantity
+            label(for='exampleFormControlSelect1') Size 
             select#exampleFormControlSelect1.form-control
-              option 1
-              option 2
-              option 3
-              option 4
-              option 5
+              option XXS 
+              option XS 
+              option S
+              option M
+              option L 
+              option XL 
+              option XXL 
           .form-group
-            label(for='exampleFormControlSelect2') Example multiple select
-            select#exampleFormControlSelect2.form-control(multiple='')
-              option 1
-              option 2
-              option 3
-              option 4
-              option 5
+            label(for='exampleFormControlInput1') Item Category 
+            input#exampleFormControlInput1.form-control(type='text' placeholder='t-shirt')
           .form-group
-            label(for='exampleFormControlTextarea1') Example textarea
+            label(for='exampleFormControlSelect1') Item Type 
+            select#exampleFormControlSelect1.form-control
+              option womens 
+              option mens 
+              option kids 
+          .form-group
+            label(for='exampleFormControlSelect1') Item Color 
+            select#exampleFormControlSelect1.form-control
+              option beige 
+              option black 
+              option blue
+              option brown 
+              option gold 
+              option gray 
+              option green 
+              option multi 
+              option orange 
+              option pink 
+              option purple 
+              option red 
+              option white 
+              option yellow 
+          .form-group
+            label(for='exampleFormControlSelect1') Item Condition 
+            select#exampleFormControlSelect1.form-control
+              option perfect 
+              option good 
+              option worn 
+          .form-group
+            label(for='exampleFormControlSelect1') Item Era 
+            select#exampleFormControlSelect1.form-control
+              option 60s 
+              option 70s 
+              option 80s 
+              option 90s 
+              option 00s 
+          .form-group
+            label(for='exampleFormControlTextarea1') Item Description 
             textarea#exampleFormControlTextarea1.form-control(rows='3')
+          .form-check
+            input#defaultCheck1.form-check-input(type='checkbox' value='')
+            label.form-check-label(for='defaultCheck1')
+            | Reworked?
+          .form-check
+            input#defaultCheck1.form-check-input(type='checkbox' value='')
+            label.form-check-label(for='defaultCheck1')
+            | Bought? 
           button.btn.btn-outline-primary(type='button') Submit
-      .jumbotron.jumbotron-fluid
-        .container
-          h1.display-4 Update an Item 
-          p.lead
-            | Update an existing item in the inventory 
