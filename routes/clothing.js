@@ -31,7 +31,6 @@ function isValidItem(clothingItem) {
     return hasName && hasSize && hasCategory && hasType && hasColor && hasCondition && hasEra && hasDescription && hasReworked && hasBought && hasPrice; 
 };
 
-
 // *** GET all clothing *** //
 router.get('/', (req, res, next) => {
     queries.getAll()
