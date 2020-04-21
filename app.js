@@ -9,6 +9,7 @@ var helmet = require('helmet')
 var clothingRouter = require('./routes/clothing');
 var usersRouter = require('./routes/users');
 var indexRouter = require('./routes/index');
+var inventoryRouter = require('./routes/inventory');
 
 // Load env variables
 require('dotenv').config();
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/css/'))
 
 app.use('/v1/clothing', clothingRouter);
+app.use('/inventory', inventoryRouter);
 app.use('/users', usersRouter);
 app.use('/', indexRouter);
 
