@@ -25,17 +25,11 @@ router.post('/', function(req, res, next) {
     
     queries.addOne(obj)
         .then((clothing) => {
-            console.log(clothing)
-        }) 
-        .then(() => res.status(200).send())
+            res.status(200).render('index');
+        })
         .catch((err) => {
             next(err);
         })
-
-
-
-    
-
 });
 
 

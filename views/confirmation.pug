@@ -1,0 +1,23 @@
+extends layout
+
+block content    
+  body
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href='/') Off The Threads Dashboard 
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link(href='/')
+                | Home 
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/inventory') Current Inventory 
+            li.nav-item
+              a.nav-link(href='#alteration_schedule') Alteration Schedule 
+            li.nav-item
+              a.nav-link(href='#transactions') Transactions 
+      .jumbotron.jumbotron-fluid
+        .container
+          h1.display-4 Inventory 
