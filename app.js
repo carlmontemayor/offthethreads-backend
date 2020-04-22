@@ -7,7 +7,6 @@ var logger = require('morgan');
 var helmet = require('helmet')
 
 var clothingRouter = require('./routes/clothing');
-var usersRouter = require('./routes/users');
 var indexRouter = require('./routes/index');
 var inventoryRouter = require('./routes/inventory');
 
@@ -28,15 +27,14 @@ if (process.env.NODE_ENV !== 'test') {
   app.use(logger('dev'));
 };
 
-app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/css/'))
 
 app.use('/v1/clothing', clothingRouter);
 app.use('/inventory', inventoryRouter);
-app.use('/users', usersRouter);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

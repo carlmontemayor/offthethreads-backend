@@ -53,11 +53,12 @@ router.get('/:id', isValidId, (req, res, next) => {
         });
 });
 
-// *** PUT single clothing item *** //
-router.post('/',  (req, res, next) => {
+// *** POST single clothing item *** //
+router.post('/', (req, res, next) => {
+    console.log(req.body)
     if(isValidItem(req.body)) {
         queries.addOne(req.body)
-            .then((clothingItem) => {
+           .then((clothingItem) => {
                 return queries.getSingle(clothingItem[0]);
             })
             .then((clothing) => {

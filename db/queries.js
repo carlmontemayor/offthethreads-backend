@@ -22,6 +22,7 @@ function getSingle(clothingId) {
 
 // POST Queries
 function addOne(clothingItem) {
+    console.log(clothingItem)
     return Clothing().insert(clothingItem, 'id');
 }
 

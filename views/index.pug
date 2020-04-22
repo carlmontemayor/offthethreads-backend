@@ -24,13 +24,13 @@ block content
           p.lead
             | Add a new item to the inventory 
       .container
-        form
+        form(id="itemInput" method="post" action="/")
           .form-group
             label(for='exampleFormControlInput1') Item Name 
-            input#exampleFormControlInput1.form-control(type='text' placeholder='Cool T-Shirt')
+            input#exampleFormControlInput1.form-control(type='text' placeholder='Cool T-Shirt' name='item_name')
           .form-group
             label(for='exampleFormControlSelect1') Size 
-            select#exampleFormControlSelect1.form-control
+            select#exampleFormControlSelect1.form-control(name='item_size')
               option XXS 
               option XS 
               option S
@@ -40,16 +40,15 @@ block content
               option XXL 
           .form-group
             label(for='exampleFormControlInput1') Item Category 
-            input#exampleFormControlInput1.form-control(type='text' placeholder='t-shirt')
+            input#exampleFormControlInput1.form-control(type='text' placeholder='t-shirt' name='item_category')
           .form-group
             label(for='exampleFormControlSelect1') Item Type 
-            select#exampleFormControlSelect1.form-control
-              option womens 
-              option mens 
-              option kids 
+            select#exampleFormControlSelect1.form-control(name='item_type')
+              option W 
+              option M 
           .form-group
             label(for='exampleFormControlSelect1') Item Color 
-            select#exampleFormControlSelect1.form-control
+            select#exampleFormControlSelect1.form-control(name='item_color')
               option beige 
               option black 
               option blue
@@ -66,27 +65,32 @@ block content
               option yellow 
           .form-group
             label(for='exampleFormControlSelect1') Item Condition 
-            select#exampleFormControlSelect1.form-control
+            select#exampleFormControlSelect1.form-control(name='item_condition')
               option perfect 
               option good 
               option worn 
           .form-group
             label(for='exampleFormControlSelect1') Item Era 
-            select#exampleFormControlSelect1.form-control
-              option 60s 
-              option 70s 
-              option 80s 
-              option 90s 
-              option 00s 
+            select#exampleFormControlSelect1.form-control(name='item_era')
+              option 60 
+              option 70 
+              option 80 
+              option 90 
+              option 00 
           .form-group
             label(for='exampleFormControlTextarea1') Item Description 
-            textarea#exampleFormControlTextarea1.form-control(rows='3')
-          .form-check
-            input#defaultCheck1.form-check-input(type='checkbox' value='')
-            label.form-check-label(for='defaultCheck1')
-            | Reworked?
-          .form-check
-            input#defaultCheck1.form-check-input(type='checkbox' value='')
-            label.form-check-label(for='defaultCheck1')
-            | Bought? 
-          button.btn.btn-outline-primary(type='button') Submit
+            textarea#exampleFormControlTextarea1.form-control(rows='3' name='item_description')
+          .form-group
+            label(for='exampleFormControlSelect1') Item Reworked 
+            select#exampleFormControlSelect1.form-control(name='item_reworked')
+              option true 
+              option false 
+          .form-group
+            label(for='exampleFormControlSelect1') Item Bought 
+            select#exampleFormControlSelect1.form-control(name='item_bought')
+              option true 
+              option false 
+          .form-group
+            label(for='exampleFormControlInput1') Item Price 
+            input#exampleFormControlInput1.form-control(type='text' placeholder='$5' name='item_price')
+          button.btn.btn-outline-primary(type='submit') Submit
